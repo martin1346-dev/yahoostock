@@ -458,3 +458,20 @@ else:
                             template=selected_template, hovermode="x unified"
                         )
                         st.plotly_chart(fig_roll, width="stretch", theme=None if selected_template else "streamlit")
+
+# ==========================================
+# 新增功能 ：頁尾版權宣告與免責聲明模組
+# ==========================================
+st.divider()
+footer_html = """
+<div style="text-align: center; color: #7f8c8d; font-size: 12px; line-height: 1.5; padding: 15px 0;">
+    <strong>版權所有 © 2026 林馬丁 (Martin Lin)。保留所有權利。</strong><br>
+    <br>
+    <b>【系統免責聲明】</b><br>
+    1. <b>僅供參考，非投資建議：</b> 本系統提供之所有財務模擬、風險運算數據，均基於歷史常態分配與特定假設條件推演。系統產出之圖表與分析結果僅供財務規劃之教育、推演與內部參考，絕不構成任何具體之投資建議、證券交易之勸誘，亦非任何保險產品之要約。<br>
+    2. <b>不保證未來績效：</b> 歷史回測數據不代表未來實際投資市場之必然表現。通膨率、醫療費用增長與稅法變動等變數皆可能影響最終實際結果。<br>
+    3. <b>風險自負原則：</b> 使用本系統之業務人員或一般使用者，應獨立判斷並自行承擔所有投資、投保與財務決策之最終風險。系統開發者及版權所有權人對任何依據本系統資訊所作之決策，及其衍生之直接或間接財務損失，概不承擔任何法律與連帶賠償責任。
+</div>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)
+# ==========================================
